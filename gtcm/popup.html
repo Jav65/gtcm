@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="popup.css"/>
+    </head>
+    <body>
+        <div class="popup" id="popup" class="flex_center">
+            <h3 id="popupText"></h3>
+            <button onclick="showPopup(false)">Ok</button>
+        </div>
+    </body>
+</html>
+
+<style>
+.popup {
+    width:400px;
+    background-color: #2d1268;
+    border-radius: 3mm;
+    top: 50%;
+    left:50%;
+    padding-top: 20px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    position: fixed;
+    /* padding: 30px; */
+    visibility: hidden;
+}
+
+#popupText {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 20px;
+    text-align: center;
+}
+  
+.popup button {
+    background-color: #460282;
+    border: 1px solid #bc49ff;
+    color: #ffffff;
+    display: block;
+    border-radius: 6px;
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+    width: 2in;
+    font-size: 20px;
+    margin-left: 25%;
+  }
+  
+.popup button:hover {
+    background-color: #fff;
+    border: 2px solid #7600bc;
+    color: #7600bc;
+    display: block;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 25%;
+  }
+</style>
+
+<script>
+    function showPopup(bool,text,location=0) {
+        if (bool) {
+            document.getElementById('popup').style.visibility = 'visible';
+            document.getElementById('popupText').innerHTML = text;
+        } else {
+        document.getElementById('popup').style.visibility = 'hidden';
+            if (!location) {
+                window.history.back();
+            } else {
+                header(location);
+            }
+        }
+    }
+</script>

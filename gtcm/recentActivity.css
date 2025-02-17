@@ -1,0 +1,59 @@
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    border: 2px solid #ddd;
+}
+
+.activity-column {
+    /* padding: 12px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.activity-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 95%;
+}
+.activity-button, .clusterBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 95%;
+}
+.activity-name {
+    font-size: 16px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.activity-des {
+    font-size: 11px;
+    flex: 0 0 auto;
+}
+
+.activity-time, .activity-status {
+    /* margin: 5px; */
+    font-size: 14px;
+    flex: 0 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .activity-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .activity-name,
+    .activity-user,
+    .activity-status,
+    .activity-time {
+        margin: 2px 0;
+    }
+}

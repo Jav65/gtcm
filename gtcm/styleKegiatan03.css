@@ -1,0 +1,35 @@
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 1200px;
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: rgb(212, 209, 209);
+    margin-top: 3rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1rem;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.comment {
+    background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+.displayFile{
+    width: 100%;
+    min-width:350px;
+    overflow: auto;
+}
+}

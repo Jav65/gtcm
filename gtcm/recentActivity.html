@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="recentActivity.css">
+    <style>
+        .item {
+            display: none;
+        }
+
+        .item.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="filter">
+        <option value="all">All</option>
+        <option value="fruit">Fruit</option>
+        <option value="vegetable">Vegetable</option>
+    </select>
+
+    <div class="item fruit">Apple</div>
+    <div class="item vegetable">Carrot</div>
+    <div class="item fruit">Banana</div>
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#filter').on('change', function () {
+                var filter = $(this).val();
+
+                if (filter === 'all') {
+                    $('.item').addClass('show');
+                } else {
+                    $('.item').removeClass('show');
+                    $('.' + filter).addClass('show');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
