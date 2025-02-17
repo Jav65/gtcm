@@ -1,11 +1,11 @@
 # Government Task Control Management (GTCM)
 Government Task Control Management (GTCM) is a centralized system designed to streamline the management and oversight of government projects. It consolidates project information into one platform, enabling efficient task assignment, real-time progress monitoring, and data-driven decision-making.
 
-![alt text](https://github.com/Jav65/gtcm/images/screenshot1.png "Screenshot 1")
-![alt text](https://github.com/Jav65/gtcm/images/screenshot2.png "Screenshot 2")
-![alt text](https://github.com/Jav65/gtcm/images/screenshot3.png "Screenshot 3")
-![alt text](https://github.com/Jav65/gtcm/images/screenshot4.png "Screenshot 4")
-![alt text](https://github.com/Jav65/gtcm/images/screenshot5.png "Screenshot 5")
+![alt text](https://github.com/Jav65/gtcm/blob/main/images/screenshot1.png "Screenshot 1")
+![alt text](https://github.com/Jav65/gtcm/blob/main/images/screenshot2.png "Screenshot 2")
+![alt text](https://github.com/Jav65/gtcm/blob/main/images/screenshot3.png "Screenshot 3")
+![alt text](https://github.com/Jav65/gtcm/blob/main/images/screenshot4.png "Screenshot 4")
+![alt text](https://github.com/Jav65/gtcm/blob/main/images/screenshot5.png "Screenshot 5")
 
 ## Background
 
