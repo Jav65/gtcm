@@ -1,0 +1,13 @@
+#canvas_xyz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.myCanvas {
+    top: 0;
+    left: 0;
+    width: 75%;
+    aspect-ratio: 1/1;
+    max-width: 200px;
+}

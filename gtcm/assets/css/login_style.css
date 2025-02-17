@@ -1,0 +1,109 @@
+.card {
+    color: #19376D;
+    width: 500px;
+    height: 250px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 17px;
+    border-radius: 20px;
+}
+
+body {
+    background-color: rgb(39, 35, 35);
+    margin: 0;
+}
+
+header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #19376D 60%, #0B2447 60%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+
+.bg3 {
+    animation-duration:5s;
+}
+  
+.content {
+    background-color:rgba(255,255,255,.8);
+    border-radius: 20px;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+  
+h1 {
+    font-family:monospace;
+}
+  
+@keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+}
+
+.card > * {
+    margin: 0;
+}
+
+
+
+.button1 {
+    margin-top: 1rem;
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #0e2d58;
+    color: white;
+}
+
+.button1:hover {
+    background-color: #0B2447;
+    color: white;
+    cursor: pointer;
+}
+
+.inputField {
+    gap: 0.5em;
+    border-radius: 25px;
+    width: 300px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: hsl(219, 76%, 92%);
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+::placeholder {
+    color: gray;
+}

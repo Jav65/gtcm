@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+
+    <title>bs4 beta user profile with activities - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            margin-top: 20px;
+            background: #e7ebf2;
+        }
+
+        /*
+Profile
+*/
+        .si-border-round {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        .social-icon-sm {
+            margin: 0 5px 5px 0;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            line-height: 30px !important;
+            color: #555;
+            text-shadow: none;
+            border-radius: 3px;
+            overflow: hidden;
+            display: block;
+            float: left;
+            text-align: center;
+            border: 1px solid #AAA;
+        }
+
+        .tabs-admin>.nav-item>.nav-link.active {
+            border-color: #0073ff;
+            color: #0073ff;
+        }
+
+        .tabs-admin>.nav-item>.nav-link {
+            padding: 10px 15px;
+            color: #555;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-bottom: -2px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .act-content span.text-small {
+            display: block;
+            color: #999;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .text-small {
+            font-size: 12px !important;
+        }
+
+        .admin-tab-content {
+            padding: 10px 15px;
+        }
+
+        .pt30 {
+            padding-top: 30px !important;
+        }
+
+        .card .card-title {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            min-height: 28px;
+            margin: 0;
+            font-size: .9rem;
+            font-weight: 600;
+            line-height: 28px;
+        }
+
+        .mb20 {
+            margin-bottom: 20px !important;
+        }
+
+        .pb20 {
+            padding-bottom: 20px !important;
+        }
+
+        .pt20 {
+            padding-top: 20px !important;
+        }
+
+        .text-small {
+            font-size: 12px !important;
+        }
+
+        .text-muted {
+            color: #999 !important;
+        }
+
+        .card .card-content {
+            padding: 15px 15px;
+        }
+
+        .profile-header {
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-header .img-fluid.rounded-circle {
+            max-width: 100px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .activity-list>li {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .activity-list .float-left {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            float: left;
+            display: block;
+            border-radius: 50%;
+            background-color: #eee;
+            font-size: 20px;
+            line-height: 100%;
+            line-height: 43px;
+            text-align: center;
+        }
+
+        .activity-list .float-left a {
+            display: inline-block;
+            color: #999;
+        }
+
+        .act-content {
+            overflow: hidden;
+        }
+
+        .act-content span.text-small {
+            display: block;
+            color: #999;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb30">
+                <div class="card">
+                    <div class="card-content pt20 pb20 profile-header">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt
+                            class="img-fluid rounded-circle">
+                        <h4 class="card-title text-center mb20">Adam Voges</h4>
+                        <p>
+                            Hello, I am Adam Voges from London, I am a professional designer at design_mylife. I hope
+                            you enjoy the Assan Templates and how its updated every month
+                        </p>
+                        <div class="text-center clearfix">
+                            <a href="#" class="social-icon-sm si-border si-facebook si-border-round">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-border si-twitter si-border-round">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-border si-g-plus si-border-round">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#" class="social-icon-sm si-border si-skype si-border-round">
+                                <i class="fa fa-skype"></i>
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 mb20">
+                                <h5>947</h5>
+                                <h6 class="text-small text-muted">Followers</h6>
+                            </div>
+                            <div class="col-md-4 mb20">
+                                <h5>583</h5>
+                                <h6 class="text-small text-muted">Tweets</h6>
+                            </div>
+                            <div class="col-md-4 mb20">
+                                <h5>48</h5>
+                                <h6 class="text-small text-muted">Posts</h6>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-rounded">Follow</a>
+                        <hr>
+                        <div class="skill-bar mb20 clearfix">
+                            <span>HTML5 / CSS3</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                                    role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar mb20 clearfix">
+                            <span>Javascript</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                                    role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 89%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar mb20 clearfix">
+                            <span>Bootstrap</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                                    role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar clearfix">
+                            <span>Coffee</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                                    role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-8 mb30">
+                <div class="card">
+                    <div>
+
+                        <ul class="nav tabs-admin" role="tablist">
+                            <li role="presentation" class="nav-item"><a class="nav-link active" href="#t1"
+                                    aria-controls="t1" role="tab" data-toggle="tab">Activities</a></li>
+                        </ul>
+
+                        <div class="tab-content admin-tab-content pt30">
+                            <div role="tabpanel" class="tab-pane active show" id="t1">
+                                <ul class="activity-list list-unstyled">
+                                    <li class="clearfix">
+                                        <div class="float-left">
+                                            <a href="#"><img src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                                                    alt class="img-fluid rounded-circle"></a>
+                                        </div>
+                                        <div class="act-content">
+                                            <div class="font400">
+                                                <a href="#" class="font600">John Doe</a> Sent you a direct Image
+                                            </div>
+                                            <span class="text-small">11 Min Ago</span>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                nonummy nibh euismod tincidunt ut.
+                                            </p>
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt
+                                                class="img-fluid img-thumbnail">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="float-left">
+                                            <a href="#"><img src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                                                    alt class="img-fluid rounded-circle"></a>
+                                        </div>
+                                        <div class="act-content">
+                                            <div class="font400">
+                                                <a href="#" class="font600">Robin jackson</a> Started Following You
+                                            </div>
+                                            <span class="text-small">11 Min Ago, On <a href="#">Twitter</a></span>
+                                            <p class="mb0">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                nonummy nibh euismod tincidunt ut.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="float-left">
+                                            <a href="#"><img src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                                                    alt class="img-fluid rounded-circle"></a>
+                                        </div>
+                                        <div class="act-content">
+                                            <div class="font400">
+                                                <a href="#" class="font600">Pamela jackson</a> Sent you a private
+                                                message
+                                            </div>
+                                            <span class="text-small">11 Min Ago, On <a href="#">Facebook</a></span>
+                                            <p class="mb20">
+                                                " Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s. Over the years, sometimes by accident, sometimes on
+                                                purpose (injected humour and the like).
+                                            </p>
+                                            <a href="#" class="btn btn-sm btn-secondary">Reply</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="t2">
+                                <ul class="activity-list list-unstyled">
+                                    <li class="clearfix">
+                                        <div class="float-left">
+                                            <a href="#"><i class="icon-palette"></i></a>
+                                        </div>
+                                        <div class="act-content">
+                                            <div class="font400">
+                                                <a href="#" class="font600">Admin Dashboard</a>
+                                            </div>
+                                            <span class="text-small">11 Min Ago</span>
+                                            <div class="mb10">
+                                                <span class="label label-default">Bootstrap4</span>
+                                                <span class="label label-default">Angular4</span>
+                                                <span class="label label-default">HTML5/CSS3</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                mollit anim id est laborum.
+                                            </p>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="float-left">
+                                            <a href="#"><i class="icon-user"></i></a>
+                                        </div>
+                                        <div class="act-content">
+                                            <div class="font400">
+                                                <a href="#" class="font600">Assan Beauty Spa</a>
+                                            </div>
+                                            <span class="text-small">11 Min Ago</span>
+                                            <div class="mb10">
+                                                <span class="label label-default">Bootstrap4</span>
+                                                <span class="label label-default">Angular4</span>
+                                                <span class="label label-default">HTML5/CSS3</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                mollit anim id est laborum.
+                                            </p>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                                                    role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="float-left">
+                                            <a href="#"><i class="icon-pencil"></i></a>
+                                        </div>
+                                        <div class="act-content">
+                                            <div class="font400">
+                                                <a href="#" class="font600">Admin Education Bootstraap4</a>
+                                            </div>
+                                            <span class="text-small">11 Min Ago</span>
+                                            <div class="mb10">
+                                                <span class="label label-default">Bootstrap4</span>
+                                                <span class="label label-default">Angular4</span>
+                                                <span class="label label-default">HTML5/CSS3</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                mollit anim id est laborum.
+                                            </p>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                                                    role="progressbar" aria-valuenow="5" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 5%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="float-left">
+                                            <a href="#"><i class="icon-star"></i></a>
+                                        </div>
+                                        <div class="act-content">
+                                            <div class="font400">
+                                                <a href="#" class="font600">Assan Restaurant</a>
+                                            </div>
+                                            <span class="text-small">11 Min Ago</span>
+                                            <div class="mb10">
+                                                <span class="label label-default">Bootstrap4</span>
+                                                <span class="label label-default">Angular4</span>
+                                                <span class="label label-default">HTML5/CSS3</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                mollit anim id est laborum.
+                                            </p>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                                    role="progressbar" aria-valuenow="35" aria-valuemin="0"
+                                                    aria-valuemax="100" style="width: 35%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="t4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+</body>
+
+</html>
